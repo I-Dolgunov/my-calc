@@ -26,12 +26,24 @@ namespace ConsoleFinancialAccounting
                     case "1": 
                         EnterExpence(ref expences, ref balance); 
                         break;
-                    case "2": ViewExpences(); break;
-                    case "3": EnterEarning(ref earnings, ref balance); break;
-                    case "4": ViewEarnings(); break;
-                    case "5": ViewBalance(); break;
-                    case "exit": activeApp = false; break;
-                    default: Console.WriteLine("Ви не обрали операцiю"); break;
+                    case "2": 
+                    ViewExpences(); 
+                    break;
+                    case "3": 
+                    EnterEarning(ref earnings, ref balance); 
+                    break;
+                    case "4": 
+                    ViewEarnings(); 
+                    break;
+                    case "5": 
+                    ViewBalance(); 
+                    break;
+                    case "exit": 
+                    activeApp = false; 
+                    break;
+                    default: 
+                    Console.WriteLine("Ви не обрали операцiю"); 
+                    break;
                 }
 
                 void EnterExpence(ref double allExpences, ref double fullBalance)
