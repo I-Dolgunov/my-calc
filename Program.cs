@@ -7,17 +7,23 @@ namespace ConsoleFinancialAccounting
         static void Main(string[] args)
         {
             bool activeApp = true;
-              double expences = 0;
+            double expences = 0;
             double earnings = 0;
             double balance = 0;
             while (activeApp)
             {
-                 Console.WriteLine("Оберiть операцiю: \n 1 - Внести витрату \n2 - Переглянути витрати \n3 - Внести дохiд \n4 - Переглянути доходи \n5 - Переглянути загальний баланс \n exit - Закрити програму");
+                 Console.WriteLine("Оберiть операцiю: \n 
+                                   1 - Внести витрату \n
+                                   2 - Переглянути витрати \n
+                                   3 - Внести дохiд \n
+                                   4 - Переглянути доходи \n
+                                   5 - Переглянути загальний баланс \n 
+                                   exit - Закрити програму");
                 string operation = Console.ReadLine();
 
                 switch (operation)
                 {
-                     case "1": 
+                    case "1": 
                         EnterExpence(ref expences, ref balance); 
                         break;
                     case "2": ViewExpences(); break;
@@ -28,7 +34,7 @@ namespace ConsoleFinancialAccounting
                     default: Console.WriteLine("Ви не обрали операцiю"); break;
                 }
 
-                 void EnterExpence(ref double allExpences, ref double fullBalance)
+                void EnterExpence(ref double allExpences, ref double fullBalance)
                 {
                     Console.WriteLine("Введiть суму:");
                     double newExpence = Convert.ToDouble(Console.ReadLine());
